@@ -24,8 +24,7 @@ jobs:
         -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
         https://api.github.com/repos/${{ secrets.GITHUB_REPOSITORY }}/git/tags \
         -d '{"tag":"tag","message":"message","object":"${{ GITHUB_SHA }}","type":"commit"}'
-              
-
+             
     # - id: auto-tag
     #   name: "Bump/tag version"
     #   uses: anothrNick/github-tag-action@1.35.0
@@ -34,6 +33,7 @@ jobs:
     #     WITH_V: true
     #     RELEASE_BRANCHES: main
     #     DEFAULT_BUMP: patch
+
 
     # - uses: actions/checkout@v2
     #   name: "Checkout create-tag action"
