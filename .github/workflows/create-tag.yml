@@ -18,7 +18,7 @@ jobs:
       with:
         fetch-depth: '0'
 
-     - id: auto-tag
+    - id: auto-tag
       name: "Bump/tag version v?.?.?"
       uses: anothrNick/github-tag-action@1.35.0
       env:
