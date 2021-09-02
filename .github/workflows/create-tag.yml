@@ -23,7 +23,7 @@ jobs:
         -X POST \
         -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
         https://api.github.com/repos/${{ secrets.GITHUB_REPOSITORY }}/git/tags \
-        -d '{"tag":"tag","message":"message","object":"${{ GITHUB_SHA }}","type":"commit"}'
+        -d '{"tag":"tag","message":"message","object":"${{ secrets.GITHUB_SHA }}","type":"commit"}'
              
     # - id: auto-tag
     #   name: "Bump/tag version"
