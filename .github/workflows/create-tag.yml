@@ -40,3 +40,5 @@ jobs:
         message: "Very noice"
         force_push_tag: true
         commit_sha: ${{ github.sha }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
