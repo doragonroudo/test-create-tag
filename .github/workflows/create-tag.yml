@@ -23,8 +23,8 @@ jobs:
         -X POST \
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        https://api.github.com/repos/${{ github.repository }}/git/tags \
-        -d '{"tag":"tag","message":"message","object":"${{ github.sha }}","type":"commit"}'
+        https://api.github.com/repos/${{ github.repository }}/git/refs \
+        -d '{"ref":"refs/tag/v3", "sha":"${{ github.sha }}"}'
              
     # - id: auto-tag
     #   name: "Bump/tag version"
