@@ -18,11 +18,15 @@ jobs:
       with:
         fetch-depth: '0'
 
-    - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.26.0
+     - id: auto-tag
+      name: "Bump/tag version v?.?.?"
+      uses: anothrNick/github-tag-action@1.35.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
+        RELEASE_BRANCHES: main
+        DEFAULT_BUMP: patch
+        #INITIAL_VERSION: default is 0.0.0
 
     - uses: actions/checkout@v2
       name: "Checkout create-tag action"
