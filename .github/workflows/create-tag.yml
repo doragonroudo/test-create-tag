@@ -1,0 +1,29 @@
+name: Create Tag
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Create tag
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+      name: "Checkout create-tag action"
+      with:
+        repository: doragonroudo/test-create-tag
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+    - name: "Tag"
+      uses: rickstaa/action-create-tag@v1
+      with:
+        tag: "v1"
+        message: "Very noice"
+        force_push_tag: true
+        commit_sha: ${{ github.sha }}
