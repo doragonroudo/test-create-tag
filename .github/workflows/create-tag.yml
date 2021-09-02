@@ -36,7 +36,7 @@ jobs:
     - name: "Tag"
       uses: rickstaa/action-create-tag@v1
       with:
-        tag: "test"
+        tag: "test2"
         message: "Very noice"
         force_push_tag: true
         commit_sha: ${{ github.sha }}
