@@ -26,7 +26,6 @@ jobs:
         WITH_V: true
         RELEASE_BRANCHES: main
         DEFAULT_BUMP: patch
-        #INITIAL_VERSION: default is 0.0.0
 
     - uses: actions/checkout@v2
       name: "Checkout create-tag action"
