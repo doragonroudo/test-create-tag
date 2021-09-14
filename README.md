@@ -6,7 +6,7 @@ This is a README of doragonroudo/test-create-tag
 
 Another line inside
 
-## Target header
+## Target
 
 We want to retrieve anything inside this one
 
@@ -22,6 +22,6 @@ CODE...
 | ----- | ----- |
 | Data1 | Data2 |
 
-## And last second level header
+## End
 
 Bye!
